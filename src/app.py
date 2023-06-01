@@ -14,9 +14,6 @@ data_name = os.getenv('trafic', 'data/traffic_10lines.parquet')
 data_path = os.path.join(os.getcwd(),data_name)
 
 
-print("========")
-print(data_path)
-
 df = pd.read_parquet(data_path)
 
 st.title('Traffic Forecaster')
