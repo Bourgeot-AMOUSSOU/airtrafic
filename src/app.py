@@ -5,6 +5,7 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly.figure_factory as ff
+from prophet import Prophet
 
 HOME_AIRPORTS = ('LGW', 'LIS', 'LYS')
 PAIRED_AIRPORTS = ('FUE', 'AMS', 'ORY')
@@ -51,9 +52,7 @@ fig.update_layout(title=f'Traffic between {home_airport} and {paired_airport}', 
 
 st.plotly_chart(fig)
 
-# Fonction réalisant une prédiction du trafic 
-#pip install prophet
-from prophet import Prophet
+
 
 def forecast_traffic(home_airport, paired_airport, forecast_date, nb_days):
 
