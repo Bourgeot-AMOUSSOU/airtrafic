@@ -9,7 +9,9 @@ import plotly.figure_factory as ff
 HOME_AIRPORTS = ('LGW', 'LIS', 'LYS')
 PAIRED_AIRPORTS = ('FUE', 'AMS', 'ORY')
 
-data_path = os.path.join(os.getcwd(),"data/traffic_10lines.parquet")
+data_name = os.getenv('trafic', 'data/traffic_10lines.parquet')
+data_path = os.path.join(os.getcwd(),data_name)
+
 
 print("========")
 print(data_path)
