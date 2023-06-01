@@ -11,6 +11,9 @@ PAIRED_AIRPORTS = ('FUE', 'AMS', 'ORY')
 
 data_path = os.path.join(os.getcwd(),"data/traffic_10lines.parquet")
 
+print("========")
+print(data_path)
+
 df = pd.read_parquet(data_path)
 
 st.title('Traffic Forecaster')
